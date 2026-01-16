@@ -1,16 +1,23 @@
-<script setup lang="ts">
-import { ref } from 'vue'
+<script>
 import Dropdown from '@/components/Dropdown.vue'
-import type { DropdownOption } from '@/types/dropdown'
 
-const selected = ref<DropdownOption | null>(null)
-
-const options: DropdownOption[] = [
-  { id: 1, name: 'Option 1', value: 1 },
-  { id: 2, name: 'Option 2', value: 2 },
-  { id: 3, name: 'Option 3', value: 3 },
-  { id: 4, name: 'Option 4', value: 4 },
-]
+export default {
+  name: 'App',
+  components: {
+    Dropdown
+  },
+  data() {
+    return {
+      selected: null,
+      options: [
+        { id: 1, name: 'Option 1', value: 1 },
+        { id: 2, name: 'Option 2', value: 2 },
+        { id: 3, name: 'Option 3', value: 3 },
+        { id: 4, name: 'Option 4', value: 4 },
+      ]
+    }
+  }
+}
 </script>
 
 <template>
